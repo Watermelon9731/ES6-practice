@@ -32,44 +32,47 @@
                                 <label class="form-label">Name</label>
                                 <div class="form-flex">
                                     <div class="form-group">
-                                        <input type="text" name="ten" id="ten" />
-                                        <span class="text-input">Tên</span>
+                                        <input type="text" name="lastName" id="lastName" />
+                                        <span class="text-input" id="notiLastName">Tên</span>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" name="ho" id="ho" />
-                                        <span class="text-input">Họ</span>
+                                        <input type="text" name="firstName" id="firstName" />
+                                        <span class="text-input" id="notiFisrtName">Họ</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" name="email" id="email" />
-                                <span class="text-input">Ví dụ :<span> khaicybersoft@gmail.com</span></span>
+                                <span class="text-input" id="notiEmail">Ví dụ :<span> khaicybersoft@gmail.com</span></span>
                             </div>
                             <div class="form-group">
                                 <label for="phone" class="form-label">Số điện thoại</label>
-                                <input type="text" name="soDienThoai" id="soDienThoai" />
+                                <input type="text" name="phoneNumber" id="phoneNumber" />
+                                <span class="text-input" id="notiPhoneNumber">Ví dụ :<span> 0909999999</span></span>
                             </div>
                             <div class="form-date">
                                 <label for="birth_date" class="form-label">Ngày tháng năm sinh</label>
                                 <div class="form-date-group">
                                     <div class="form-date-item">
-                                        <input id="ngay" name="ngay"></input>
+                                        <input id="day" name="day"></input>
                                         <span class="text-input">Ngày</span>
                                     </div>
                                     <div class="form-date-item">
-                                        <input id="thang" name="thang"></input>
+                                        <input id="month" name="month"></input>
                                         <span class="text-input">Tháng</span>
                                     </div>
                                     <div class="form-date-item">
-                                        <input id="nam" name="nam"></input>
+                                        <input id="year" name="year"></input>
                                         <span class="text-input">Năm</span>
                                     </div>
                                 </div>
+                                <span class="text-input" id="notiBirthDate">Ví dụ :<span> 01 - 06 - 1996</span></span>
                             </div>
                             <div class="form-group">
                                 <label for="ssn" class="form-label">Địa chỉ</label>
-                                <input type="text" name="diaChi" id="diaChi" />
+                                <input type="text" name="address" id="address" />
+                                <span class="text-input" id="notiAddress">Ví dụ :<span> 101 Trần Hưng Đạo, P. Cầu Ông Lãnh, Quận 1, TP Hồ Chí Minh</span></span>
                             </div>
                         </div>
                     </fieldset>
@@ -79,21 +82,21 @@
                         <h2>Thông tin đi lại di chuyển</h2>
                         <div class="fieldset-content">
                             <div class="form-group">
-                                <label for="thongTinDiChuyen" class="form-label">Bạn có tiếp xúc với người bị nghi nhiễm
+                                <label for="movingDetail" class="form-label">Bạn có tiếp xúc với người bị nghi nhiễm
                                     covid19 không? Hãy mô tả thông tin đi lại của bạn bên dưới</label>
+                                    <span class="text-input" id="notiMovingDetail">Lưu ý :<span> Không cố ý khai báo, thông tin sai sự thật</span></span>
                                 <div class="form-find">
-                                    <input type="text" name="thongTinDiChuyen" id="thongTinDiChuyen"
+                                    <input type="text" name="movingDetail" id="movingDetail"
                                         placeholder="Thông tin di chuyển" />
-
                                 </div>
-                                
                             </div>
                             <div class="form-group ">
                          
                                         <label class="form-label">Bạn nghĩ bạn thuộc F mấy ?</label>
                                         <br />
+                                        <span class="text-input" id="notiHeathCheck">Lưu ý :<span> Không cố ý khai báo, thông tin sai sự thật</span></span>
                                         <div class="form-find " >
-                                            <select id="loaiNhiem" name="loaiNhiem" style="width: 100%;
+                                            <select id="heathCheck" name="heathCheck" style="width: 100%;
                                             display: block;
                                             border: 1px solid #ebebeb;
                                             height: 50px;
@@ -125,6 +128,22 @@
                             <div class="donate-us">
                                Dùng ES6 lấy thông tin từ người dùng nhập vào hiển thị bên dưới 
                             </div>
+                            <div class="form-group" id="show-info">
+                                 <table>
+                                         <tr>
+                                             <td>Họ và tên</td>
+                                             <td id="txtName">Nguyen Van A</td>
+                                         </tr>
+                                         <tr>
+                                             <td></td>
+                                             <td></td>
+                                         </tr>
+                                         <tr>
+                                             <td></td>
+                                             <td></td>
+                                         </tr>
+                                 </table>
+                            </div>
                         </div>
                     </fieldset>
                 </div>
@@ -142,6 +161,7 @@
     <script src="vendor/nouislider/nouislider.min.js"></script>
     <script src="vendor/wnumb/wNumb.js"></script>
     <script src="js/main.js"></script>
+    <script src="./js/index.js" type="module"></script>
 </body>
 
 </html>

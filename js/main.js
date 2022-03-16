@@ -23,9 +23,9 @@
         stepsOrientation: "vertical",
         titleTemplate: '<div class="title"><span class="step-number">#index#</span><span class="step-text">#title#</span></div>',
         labels: {
-            previous: 'Previous',
+            previous: 'Trở về',
             next: 'Kế tiếp',
-            finish: 'Finish',
+            finish: 'Kết thúc',
             current: ''
         },
         onStepChanging: function(event, currentIndex, newIndex) {
@@ -52,7 +52,7 @@
             return form.valid();
         },
         onFinished: function(event, currentIndex) {
-            alert('Submited');
+            alert('Đã nhận thông tin!');
         },
         onStepChanged: function(event, currentIndex, priorIndex) {
 
