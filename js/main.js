@@ -25,7 +25,7 @@
         labels: {
             previous: 'Trở về',
             next: 'Kế tiếp',
-            finish: 'Kết thúc',
+            finish: 'In thông tin',
             current: ''
         },
         onStepChanging: function(event, currentIndex, newIndex) {

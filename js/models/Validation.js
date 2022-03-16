@@ -62,43 +62,44 @@ export class Validation {
         let d = Number(day);
         let m = Number(month);
         let y = Number(year);
-        if (d * m * y > 0) {
-            switch (m) {
-                case 2:
-                    if (y % 4 === 0 && y % 400 === 0 && y % 100 !== 0) {
-                        if (d > 29) {
-                            document.querySelector(selector).style.color = 'red';
-                            document.querySelector(selector).innerHTML = `Vui lòng nhập ngày hợp lệ`;
-                            return false;
-                        }
-                    } else {
-                        if (d > 28) {
-                            document.querySelector(selector).style.color = 'red';
-                            document.querySelector(selector).innerHTML = `Vui lòng nhập ngày hợp lệ`;
-                            return false;
-                        }
-                    }
-                    break;
-                case 1, 3, 5, 7, 8, 10, 12:
-                    if (d > 31) {
-                        document.querySelector(selector).style.color = 'red';
-                        document.querySelector(selector).innerHTML = `Vui lòng nhập ngày hợp lệ`;
-                        return false;
-                    }
-                    break;
-                case 4, 6, 9, 11:
-                    if (d > 30) {
-                        document.querySelector(selector).style.color = 'red';
-                        document.querySelector(selector).innerHTML = `Vui lòng nhập ngày hợp lệ`;
-                        return false;
-                    }
-                    break;
-                default:
-                    break;
-            }
+        if (d * m * y <= 0) {
+            document.querySelector(selector).style.color = 'red';
+            document.querySelector(selector).innerHTML = `Vui lòng nhập ngày hợp lệ`;
+            return false;
         }
-        document.querySelector(selector).style.color = 'red';
-        document.querySelector(selector).innerHTML = `Vui lòng nhập ngày hợp lệ`;
-        return false;
+        switch (m) {
+            case 2:
+                if (y % 4 === 0 && y % 400 === 0 && y % 100 !== 0) {
+                    if (d > 29) {
+                        document.querySelector(selector).style.color = 'red';
+                        document.querySelector(selector).innerHTML = `Vui lòng nhập ngày hợp lệ`;
+                        return false;
+                    }
+                } else {
+                    if (d > 28) {
+                        document.querySelector(selector).style.color = 'red';
+                        document.querySelector(selector).innerHTML = `Vui lòng nhập ngày hợp lệ`;
+                        return false;
+                    }
+                }
+                break;
+            case 1, 3, 5, 7, 8, 10, 12:
+                if (d > 31) {
+                    document.querySelector(selector).style.color = 'red';
+                    document.querySelector(selector).innerHTML = `Vui lòng nhập ngày hợp lệ`;
+                    return false;
+                }
+                break;
+            case 4, 6, 9, 11:
+                if (d > 30) {
+                    document.querySelector(selector).style.color = 'red';
+                    document.querySelector(selector).innerHTML = `Vui lòng nhập ngày hợp lệ`;
+                    return false;
+                }
+                break;
+            default:
+                break;
+        }
+        return true;
     }
 }

@@ -3,7 +3,9 @@ export class Infor {
     lastName = '';
     email = '';
     phoneNumber = Number;
-    birthDate = '';
+    day = '';
+    month = '';
+    year = '';
     address = '';
     movingDetail = '';
     healthCheck = Number;
@@ -11,9 +13,9 @@ export class Infor {
 
     };
 
-    birthDateInput(day,month,year) {
-        let dateString = `${day}-${month}-${year}`;
-        return Date.parse(dateString);
+    birthDate(day,month,year) {
+        let dateString = `${day} - ${month} - ${year}`;
+        return dateString;
     }
 
     healthStatus(key) {
@@ -31,7 +33,7 @@ export class Infor {
             case 4:
                 healthStatus = 'Hiện đang điều trị HIV';
             default:
-                console.log(error);
+                console.log('error');
                 break;
         }
         return healthStatus;
