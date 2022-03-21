@@ -1,5 +1,6 @@
-import { Infor } from "./models/Infor.js";
-import { Validation } from "./models/Validation.js";
+import { Infor } from "../models/Infor.js";
+import { Validation } from "../models/Validation.js";
+import { Table } from "../models/Table.js"
 
 const btnFinish = document.querySelectorAll('a');
 for (let i = 0; i < btnFinish.length; i++) {
@@ -7,6 +8,10 @@ for (let i = 0; i < btnFinish.length; i++) {
         btnFinish[i].id = 'btnSubmit';
     }
 }
+
+let table = new Table();
+table.getLocalStorage();
+table.renderTable('#show-info table tbody');
 
 document.querySelector('#btnSubmit').onclick = () => {
     console.log('Da DOM thanh cong');
@@ -42,37 +47,7 @@ document.querySelector('#btnSubmit').onclick = () => {
         alert('Thông tin không hợp lệ vui lòng kiểm tra lại!');
         return;
     }
-
-    let tableString = `
-    <tr>
-        <td>Họ và tên:</td>
-        <td>${user.firstName} ${user.lastName}</td>
-    </tr>
-    <tr>
-        <td>Địa chỉ email:</td>
-        <td>${user.email}</td>
-    </tr>
-    <tr>
-        <td>Số điện thoại:</td>
-        <td>${user.phoneNumber}</td>
-    </tr>
-    <tr>
-        <td>Ngày tháng năm sinh:</td>
-        <td>${user.birthDate(Number(user.day),Number(user.month),Number(user.year))}</td>
-    </tr>
-    <tr>
-        <td>Địa chỉ:</td>
-        <td>${user.address}</td>
-    </tr>
-    <tr>
-        <td>Thông tin di chuyển:</td>
-        <td>${user.movingDetail}</td>
-    </tr>
-    <tr>
-    <td>Tình trạng sức khoẻ:</td>
-    <td>${user.healthStatus(Number(user.healthCheck))}</td>
-    </tr>
-    `;
-
-    document.querySelector('#show-info table').innerHTML = tableString
+    table.addUserInfor(user);
+    table.saveLocalStorage();
+    table.renderTable('#show-info table tbody');
 };

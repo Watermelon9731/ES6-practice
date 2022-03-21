@@ -1,171 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="colorlib.com">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="colorlib.com" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Làm bài tập đi nhé</title>
 
     <!-- Font Icon -->
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
-    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+    <link
+      rel="stylesheet"
+      href="fonts/material-icon/css/material-design-iconic-font.min.css"
+    />
+    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css" />
 
     <!-- Main css -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
-
+  <body>
     <div class="main">
-
-        <div class="container container-glass">
-            <form method="POST" id="signup-form" class="signup-form" action="#">
-                <div>
-                    <h3>Thông tin khai báo y tế</h3>
-                    <fieldset>
-                        <h2>Khai báo y tế</h2>
-                        <p class="desc">Hãy điền thông tin khai báo bên dưới thật chính xác bạn nhé !</p>
-                        <div class="fieldset-content">
-                            <div class="form-row">
-                                <label class="form-label">Name</label>
-                                <div class="form-flex">
-                                    <div class="form-group">
-                                        <input type="text" name="lastName" id="lastName" />
-                                        <span class="text-input" id="notiLastName">Tên</span>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" name="firstName" id="firstName" />
-                                        <span class="text-input" id="notiFirstName">Họ</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" name="email" id="email" />
-                                <span class="text-input" id="notiEmail">Ví dụ :<span> khaicybersoft@gmail.com</span></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone" class="form-label">Số điện thoại</label>
-                                <input type="text" name="phoneNumber" id="phoneNumber" />
-                                <span class="text-input" id="notiPhoneNumber">Ví dụ :<span> 0909999999</span></span>
-                            </div>
-                            <div class="form-date">
-                                <label for="birth_date" class="form-label">Ngày tháng năm sinh</label>
-                                <div class="form-date-group">
-                                    <div class="form-date-item">
-                                        <input id="day" name="day"></input>
-                                        <span class="text-input">Ngày</span>
-                                    </div>
-                                    <div class="form-date-item">
-                                        <input id="month" name="month"></input>
-                                        <span class="text-input">Tháng</span>
-                                    </div>
-                                    <div class="form-date-item">
-                                        <input id="year" name="year"></input>
-                                        <span class="text-input">Năm</span>
-                                    </div>
-                                </div>
-                                <span class="text-input" id="notiBirthDate">Ví dụ :<span> 01 - 06 - 1996</span></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="ssn" class="form-label">Địa chỉ</label>
-                                <input type="text" name="address" id="address" />
-                                <span class="text-input" id="notiAddress">Ví dụ :<span> 101 Trần Hưng Đạo, P. Cầu Ông Lãnh, Quận 1, TP Hồ Chí Minh</span></span>
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <h3>Điền đầy đủ thông tin sau</h3>
-                    <fieldset>
-                        <h2>Thông tin đi lại di chuyển</h2>
-                        <div class="fieldset-content">
-                            <div class="form-group">
-                                <label for="movingDetail" class="form-label">Bạn có tiếp xúc với người bị nghi nhiễm
-                                    covid19 không? Hãy mô tả thông tin đi lại của bạn bên dưới</label>
-                                    <span class="text-input" id="notiMovingDetail">Lưu ý :<span> Không cố ý khai báo, thông tin sai sự thật</span></span>
-                                <div class="form-find">
-                                    <input type="text" name="movingDetail" id="movingDetail"
-                                        placeholder="Thông tin di chuyển" />
-                                </div>
-                            </div>
-                            <div class="form-group ">
-                         
-                                        <label class="form-label">Bạn nghĩ bạn thuộc F mấy ?</label>
-                                        <br />
-                                        <span class="text-input" id="notiHealthCheck">Lưu ý :<span> Không cố ý khai báo, thông tin sai sự thật</span></span>
-                                        <div class="form-find " >
-                                            <select id="healthCheck" name="healthCheck" style="width: 100%;
-                                            display: block;
-                                            border: 1px solid #ebebeb;
-                                            height: 50px;
-                                            box-sizing: border-box;
-                                            padding: 0 20px;
-                                            color: #222;
-                                            font-weight: bold;
-                                            font-size: 14px;
-                                            font-family: 'Roboto Slab';">
-                                                <option value="1">F0</option>
-                                                <option value="2">F1</option>
-                                                <option value="3">F2</option>
-                                                <option value="4">HIV</option>
-                                            </select>
-                                      
-                                </div>
-                            </div>
-                            <div class="choose-bank">
-                                <p class="choose-bank-desc"></p>
-
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <h3>Cám ơn bạn đã điền đầy đủ thông tin</h3>
-                    <fieldset>
-                        <h2>Thông tin của bạn</h2>
-                        <div class="fieldset-content">
-                            <div class="donate-us">
-                               Dùng ES6 lấy thông tin từ người dùng nhập vào hiển thị bên dưới 
-                            </div>
-                            <div class="form-group" id="show-info">
-                                 <table>
-                                         <!-- <tr>
-                                             <td>Họ và tên:</td>
-                                             <td id="txtName">Nguyen Van A</td>
-                                         </tr>
-                                         <tr>
-                                             <td>Địa chỉ email:</td>
-                                             <td></td>
-                                         </tr>
-                                         <tr>
-                                             <td>Số điện thoại:</td>
-                                             <td></td>
-                                         </tr>
-                                         <tr>
-                                            <td>Ngày tháng năm sinh:</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Địa chỉ:</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Thông tin di chuyển:</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tình trạng sức khoẻ:</td>
-                                            <td></td>
-                                        </tr> -->
-                                 </table>
-                            </div>
-                        </div>
-                    </fieldset>
+      <div class="container container-glass">
+        <form method="POST" id="signup-form" class="signup-form" action="#">
+          <div>
+            <h3>Thông tin khai báo y tế</h3>
+            <fieldset>
+              <h2>Khai báo y tế</h2>
+              <p class="desc">
+                Hãy điền thông tin khai báo bên dưới thật chính xác bạn nhé !
+              </p>
+              <div class="fieldset-content">
+                <div class="form-row">
+                  <label class="form-label">Name</label>
+                  <div class="form-flex">
+                    <div class="form-group">
+                      <input type="text" name="lastName" id="lastName" />
+                      <span class="text-input" id="notiLastName">Tên</span>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" name="firstName" id="firstName" />
+                      <span class="text-input" id="notiFirstName">Họ</span>
+                    </div>
+                  </div>
                 </div>
-            </form>
-        </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" name="email" id="email" />
+                  <span class="text-input" id="notiEmail"
+                    >Ví dụ :<span> khaicybersoft@gmail.com</span></span
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="phone" class="form-label">Số điện thoại</label>
+                  <input type="text" name="phoneNumber" id="phoneNumber" />
+                  <span class="text-input" id="notiPhoneNumber"
+                    >Ví dụ :<span> 0909999999</span></span
+                  >
+                </div>
+                <div class="form-date">
+                  <label for="birth_date" class="form-label"
+                    >Ngày tháng năm sinh</label
+                  >
+                  <div class="form-date-group">
+                    <div class="form-date-item">
+                      <input id="day" name="day" />
+                      <span class="text-input">Ngày</span>
+                    </div>
+                    <div class="form-date-item">
+                      <input id="month" name="month" />
+                      <span class="text-input">Tháng</span>
+                    </div>
+                    <div class="form-date-item">
+                      <input id="year" name="year" />
+                      <span class="text-input">Năm</span>
+                    </div>
+                  </div>
+                  <span class="text-input" id="notiBirthDate"
+                    >Ví dụ :<span> 01 - 06 - 1996</span></span
+                  >
+                </div>
+                <div class="form-group">
+                  <label for="ssn" class="form-label">Địa chỉ</label>
+                  <input type="text" name="address" id="address" />
+                  <span class="text-input" id="notiAddress"
+                    >Ví dụ :<span>
+                      101 Trần Hưng Đạo, P. Cầu Ông Lãnh, Quận 1, TP Hồ Chí
+                      Minh</span
+                    ></span
+                  >
+                </div>
+              </div>
+            </fieldset>
 
+            <h3>Điền đầy đủ thông tin sau</h3>
+            <fieldset>
+              <h2>Thông tin đi lại di chuyển</h2>
+              <div class="fieldset-content">
+                <div class="form-group">
+                  <label for="movingDetail" class="form-label"
+                    >Bạn có tiếp xúc với người bị nghi nhiễm covid19 không? Hãy
+                    mô tả thông tin đi lại của bạn bên dưới</label
+                  >
+                  <span class="text-input" id="notiMovingDetail"
+                    >Lưu ý :<span>
+                      Không cố ý khai báo, thông tin sai sự thật</span
+                    ></span
+                  >
+                  <div class="form-find">
+                    <input
+                      type="text"
+                      name="movingDetail"
+                      id="movingDetail"
+                      placeholder="Thông tin di chuyển"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Bạn nghĩ bạn thuộc F mấy ?</label>
+                  <br />
+                  <span class="text-input" id="notiHealthCheck"
+                    >Lưu ý :<span>
+                      Không cố ý khai báo, thông tin sai sự thật</span
+                    ></span
+                  >
+                  <div class="form-find">
+                    <select
+                      id="healthCheck"
+                      name="healthCheck"
+                      style="
+                        width: 100%;
+                        display: block;
+                        border: 1px solid #ebebeb;
+                        height: 50px;
+                        box-sizing: border-box;
+                        padding: 0 20px;
+                        color: #222;
+                        font-weight: bold;
+                        font-size: 14px;
+                        font-family: 'Roboto Slab';
+                      "
+                    >
+                      <option value="1">F0</option>
+                      <option value="2">F1</option>
+                      <option value="3">F2</option>
+                      <option value="4">HIV</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="choose-bank">
+                  <p class="choose-bank-desc"></p>
+                </div>
+              </div>
+            </fieldset>
+
+            <h3>Cám ơn bạn đã điền đầy đủ thông tin</h3>
+            <fieldset>
+              <h2>Thông tin của bạn</h2>
+              <div class="fieldset-content">
+                <div class="donate-us">
+                  Dùng ES6 lấy thông tin từ người dùng nhập vào hiển thị bên
+                  dưới
+                </div>
+                <div class="form-group" id="show-info">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Họ và tên</th>
+                        <th>Email</th>
+                        <th>Số điện thoại</th>
+                        <th>Ngày sinh</th>
+                        <th>Địa chỉ</th>
+                        <th>Thông tin di chuyển</th>
+                        <th>Tình trạng</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </form>
+      </div>
     </div>
 
     <!-- JS -->
@@ -177,7 +193,6 @@
     <script src="vendor/nouislider/nouislider.min.js"></script>
     <script src="vendor/wnumb/wNumb.js"></script>
     <script src="js/main.js"></script>
-    <script src="./js/index.js" type="module"></script>
-</body>
-
+    <script src="./js/controllers/index.js" type="module"></script>
+  </body>
 </html>

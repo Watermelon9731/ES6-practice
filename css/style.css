@@ -385,11 +385,6 @@ input {
   display: none;
 }
 
-.content,
-.actions {
-  /* background: #f8f8f8;  */
-}
-
 .actions {
   padding-bottom: 90px;
 }
@@ -740,21 +735,57 @@ input.error {
   background-color: #4966b1;
 }
 
-.fieldset-content #show-info table tr td {
-  border: 2px solid #4966b1;
-  font-size: 1.6rem;
-  line-height: 4rem;
-  padding-left: 20px;
+.fieldset-content #show-info table tr {
+  height: 50px;
   color: white;
 }
 
-.fieldset-content #show-info table tr td:first-child {
-  font-weight: bold;
+.fieldset-content #show-info table thead th {
+  border: 1px solid #4966b1;
+  border-right: 1px solid white;
+  font-size: 0.9rem;
+  padding: 0 20px;
 }
 
-.fieldset-content #show-info table tr td:last-child {
-  width: 60%;
-  overflow: hidden;
+.fieldset-content #show-info table thead th:last-child {
+  border-right: 1px solid #4966b1;
+}
+
+.fieldset-content #show-info table tbody td {
+  background-color: white;
+  color: #4966b1;
+  border: 1px solid #4966b1;
+  border-top: none;
+  padding: 0 10px;
+  font-size: 0.8rem;
+}
+
+.fieldset-content #show-info table tbody td .editBtn {
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  width: 55px;
+  font-size: 13px;
+  margin: 5px auto;
+  padding: 5px;
+}
+
+.fieldset-content #show-info table tbody td .deleteBtn {
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  width: 55px;
+  font-size: 13px;
+  margin: 5px auto;
+  padding: 5px;
 }
 
 body {

@@ -13,25 +13,26 @@ export class Infor {
 
     };
 
-    birthDate(day,month,year) {
-        let dateString = `${day} - ${month} - ${year}`;
+    birthDate = function(day,month,year) {
+        let dateString = `${day}/${month}/${year}`;
         return dateString;
     }
 
-    healthStatus(key) {
+    healthStatus = function(key) {
         let healthStatus = '';
         switch (key) {
             case 1:
-                healthStatus = 'Hiện đang là F0';
+                healthStatus = 'F0';
                 break;
             case 2:
-                healthStatus = 'Hiện đang là F1';
+                healthStatus = 'F1';
                 break;
             case 3:
-                healthStatus = 'Hiện đang là F2';
+                healthStatus = 'F2';
                 break;
             case 4:
-                healthStatus = 'Hiện đang điều trị HIV';
+                healthStatus = 'HIV';
+                break;
             default:
                 console.log('error');
                 break;
